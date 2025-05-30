@@ -1,11 +1,10 @@
 package com.example.frontend;
 
-import static com.example.frontend.R.id.*;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,12 +12,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class OnBoardingActivity extends AppCompatActivity {
-    private TextView titleTextView, descTextView;
+    private TextView titleTextView;
+    private TextView descTextView;
     private ImageView leftArrow, rightArrow;
+
 
     private List<OnboardingItem> onboardingItems = new ArrayList<>();
     private int currentIndex = 0;
@@ -34,11 +37,14 @@ public class OnBoardingActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
         // Ánh xạ view
         titleTextView = findViewById(R.id.title);
         descTextView = findViewById(R.id.description);
         leftArrow = findViewById(R.id.leftArrow);
         rightArrow = findViewById(R.id.rightArrow);
+
 
         // Dữ liệu onboarding
         onboardingItems.add(new OnboardingItem(
@@ -47,15 +53,17 @@ public class OnBoardingActivity extends AppCompatActivity {
         ));
         onboardingItems.add(new OnboardingItem(
                 "Ear Piercing Blog: Trends, Tips & Inspiration",
-                "Stay up-to-date with the latest ear piercing trends, care tips, and style inspirations through our blog. Learn everything you need to know to choose the perfect piercing and care for it!"
+                "Stay up-to-date with the latest ear piercing trends, care tips, and style inspirations through our blog"
         ));
         onboardingItems.add(new OnboardingItem(
                 "Order Tracking: Stay Updated",
                 "Track your order status from placement to delivery with our real-time order tracking feature."
         ));
 
+
         // Hiển thị nội dung đầu tiên
         updateContent(currentIndex);
+
 
         // Sự kiện nút mũi tên
         rightArrow.setOnClickListener(view -> {
@@ -65,6 +73,7 @@ public class OnBoardingActivity extends AppCompatActivity {
             }
         });
 
+
         leftArrow.setOnClickListener(view -> {
             if (currentIndex > 0) {
                 currentIndex--;
@@ -73,16 +82,39 @@ public class OnBoardingActivity extends AppCompatActivity {
         });
     }
 
+
     private void updateContent(int index) {
         OnboardingItem item = onboardingItems.get(index);
+
+
+        // Hiển thị trực tiếp không animate
         titleTextView.setText(item.title);
         descTextView.setText(item.description);
 
+
+        // Cập nhật dot
+        View dot1 = findViewById(R.id.dot1);
+        View dot2 = findViewById(R.id.dot2);
+        View dot3 = findViewById(R.id.dot3);
+
+
+        dot1.setSelected(false);
+        dot2.setSelected(false);
+        dot3.setSelected(false);
+
+
+        switch (index) {
+            case 0: dot1.setSelected(true); break;
+            case 1: dot2.setSelected(true); break;
+            case 2: dot3.setSelected(true); break;
+        }
     }
 
-    static class OnboardingItem {
+
+    class OnboardingItem {
         String title;
         String description;
+
 
         OnboardingItem(String title, String description) {
             this.title = title;
@@ -90,3 +122,6 @@ public class OnBoardingActivity extends AppCompatActivity {
         }
     }
 }
+
+
+

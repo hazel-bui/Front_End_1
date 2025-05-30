@@ -64,6 +64,7 @@
             android:text="Explore our stunning collection of ear piercings with a smooth and easy shopping experience."
             android:textColor="@android:color/darker_gray"
             android:textSize="13sp"
+            android:maxLines="3"
             android:gravity="center"
             android:layout_marginBottom="16dp" />
 
@@ -73,7 +74,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="0dp">
 
             <!-- Left Arrow -->
             <ImageView
