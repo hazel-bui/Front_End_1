@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@android:color/white">
 
     <!-- Skip Button -->
@@ -36,7 +37,7 @@
         android:layout_height="250dp"
         android:orientation="vertical"
         android:background="#E8E3D4"
-        android:padding="60dp"
+        android:padding="40dp"
         android:layout_marginTop="8dp"
         android:elevation="4dp"
         android:clipToOutline="true"
@@ -50,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Seamless Shopping Experience"
+            android:fontFamily="@font/montserrat_bold"
             android:textColor="#847c4a"
             android:textStyle="bold"
             android:textSize="18sp"
@@ -63,6 +65,7 @@
             android:layout_height="wrap_content"
             android:text="Explore our stunning collection of ear piercings with a smooth and easy shopping experience."
             android:textColor="@android:color/darker_gray"
+            android:fontFamily="@font/montserrat_regular"
             android:textSize="13sp"
             android:maxLines="3"
             android:gravity="center"
