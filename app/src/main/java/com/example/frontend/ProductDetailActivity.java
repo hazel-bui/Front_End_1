@@ -19,6 +19,8 @@ public class ProductDetailActivity extends AppCompatActivity {
     private FrameLayout goldColor, silverColor;
     private ImageView checkGold, checkSilver;
 
+    private TextView productTitle, soldText, ratingText, productDetailsContent;
+
     private TextView quantityValue, totalPriceValue;
     private ImageView btnDecrease, btnPlus; // bạn dùng ImageView hay Button thì khai báo tương ứng
     private int quantity = 1;
@@ -60,6 +62,21 @@ public class ProductDetailActivity extends AppCompatActivity {
                 checkSilver.setVisibility(View.VISIBLE);
             }
         });
+
+        // Ánh xạ view
+        productTitle = findViewById(R.id.productTitle);
+        soldText = findViewById(R.id.soldText);
+        ratingText = findViewById(R.id.ratingText);
+        productDetailsContent = findViewById(R.id.productDetailsContent);
+
+        // Thiết lập text từ Java
+        productTitle.setText("Tote Earrings");
+        soldText.setText("423 SOLD");
+        ratingText.setText("4.3 (53 reviews)");
+        productDetailsContent.setText("Designed in Denmark\n"
+                + "Skillfully crafted in recycled sterling silver\n"
+                + "Soft geometry trapeze shape with flat sides\n"
+                + "BLACK is engraved on one side only");
 
         btnDecrease.setOnClickListener(new View.OnClickListener() {
             @Override

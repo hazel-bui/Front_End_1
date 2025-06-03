@@ -10,22 +10,22 @@
 
     <!-- Skip Button -->
     <TextView
-        android:id="@+id/skipButton"
+        android:id="@+id/btnOnBoardingSkip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Skip"
+        android:layout_margin="16dp"
+        android:text="@string/title_button_onboarding_skip"
         android:textColor="@android:color/black"
         android:textSize="14sp"
-        android:layout_margin="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Placeholder for image or animation -->
     <FrameLayout
         android:id="@+id/imagePlaceholder"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/skipButton"
+        app:layout_constraintTop_toBottomOf="@id/btnOnBoardingSkip"
         app:layout_constraintBottom_toTopOf="@+id/bottomCard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -47,10 +47,10 @@
 
         <!-- Title -->
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/txtOnboardingTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Seamless Shopping Experience"
+            android:text=""
             android:fontFamily="@font/montserrat_bold"
             android:textColor="#847c4a"
             android:textStyle="bold"
@@ -60,10 +60,10 @@
 
         <!-- Description -->
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/txtOnboardingDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Explore our stunning collection of ear piercings with a smooth and easy shopping experience."
+            android:text=""
             android:textColor="@android:color/darker_gray"
             android:fontFamily="@font/montserrat_regular"
             android:textSize="13sp"
@@ -81,7 +81,7 @@
 
             <!-- Left Arrow -->
             <ImageView
-                android:id="@+id/leftArrow"
+                android:id="@+id/btnOnboardingBack"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@mipmap/ic_back_arrow"
@@ -120,7 +120,7 @@
 
             <!-- Right Arrow -->
             <ImageView
-                android:id="@+id/rightArrow"
+                android:id="@+id/btnOnboardingNext"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@mipmap/ic_arrow_right"

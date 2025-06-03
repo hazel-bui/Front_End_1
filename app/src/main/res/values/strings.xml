@@ -4,9 +4,11 @@
     <string name="title_product_color">Color</string>
     <string name="title_product_quantity">Quantity</string>
     <string name="title_product_total_price">TOTAL PRICE</string>
-    <string name="title_help_center">Help Center</string>
-    <string name="title_search">Search</string>
-    <string name="title_faqs">FAQs</string>
-    <string name="title_contact_us">Contact Us</string>
+    <string name="title_helpcenter_helpcenter">Help Center</string>
+    <string name="title_helpcenter_search">Search</string>
+    <string name="title_button_onboarding_skip">Skip</string>
+    <string name="title_button_helpcenter_faqs">FAQs</string>
+    <string name="title_button_helpcenter_contactus">Contact Us</string>
+    <string name="title_button_productdetail_addtocart">ADD TO CART</string>
 
 </resources>

@@ -18,7 +18,7 @@
         android:gravity="center_vertical">
 
         <TextView
-            android:id="@+id/faq_question"
+            android:id="@+id/txtFaqQuestion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -28,7 +28,7 @@
             android:textSize="16sp"/>
 
         <ImageView
-            android:id="@+id/faq_toggle_icon"
+            android:id="@+id/btnFaqAdd"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:tint="#847c4a"

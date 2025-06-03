@@ -40,10 +40,10 @@ public class OnBoardingActivity extends AppCompatActivity {
 
 
         // Ánh xạ view
-        titleTextView = findViewById(R.id.title);
-        descTextView = findViewById(R.id.description);
-        leftArrow = findViewById(R.id.leftArrow);
-        rightArrow = findViewById(R.id.rightArrow);
+        titleTextView = findViewById(R.id.txtOnboardingTitle);
+        descTextView = findViewById(R.id.txtOnboardingDescription);
+        leftArrow = findViewById(R.id.btnOnboardingBack);
+        rightArrow = findViewById(R.id.btnOnboardingNext);
 
 
         // Dữ liệu onboarding

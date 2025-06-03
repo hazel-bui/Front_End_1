@@ -47,7 +47,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/montserrat_bold"
-            android:text="Tote Earrings"
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -78,7 +78,7 @@
                 android:paddingTop="4dp"
                 android:paddingEnd="8dp"
                 android:paddingBottom="4dp"
-                android:text="423 SOLD"
+                android:text=""
                 android:textColor="@android:color/black"
                 android:textSize="12sp" />
 
@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:fontFamily="@font/montserrat_regular"
-                android:text="4.3 (53 reviews)"
+                android:text=""
                 android:textColor="@android:color/darker_gray"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -139,7 +139,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/montserrat_regular"
-            android:text="Designed in Denmark\nSkillfully crafted in recycled sterling silver\nSoft geometry trapeze shape with flat sides\nBLACK is engraved on one side only"
+            android:text=""
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -324,15 +324,15 @@
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/addToCartButton"
+                android:id="@+id/btnProductdetailAddtocart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:backgroundTint="#847c4a"
+                android:fontFamily="@font/montserrat_bold"
                 android:paddingStart="24dp"
                 android:paddingEnd="24dp"
-                android:text="ADD TO CART"
-                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/title_button_productdetail_addtocart"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
