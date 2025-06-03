@@ -6,12 +6,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class ProductDetailActivity extends AppCompatActivity {
 
@@ -20,6 +16,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     private ImageView checkGold, checkSilver;
 
     private TextView productTitle, soldText, ratingText, productDetailsContent;
+    private ImageView imgProductDetailImage;
 
     private TextView quantityValue, totalPriceValue;
     private ImageView btnDecrease, btnPlus; // bạn dùng ImageView hay Button thì khai báo tương ứng
@@ -30,7 +27,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
 
-        productImage = findViewById(R.id.productImage);
+        productImage = findViewById(R.id.imgProductdetailImage);
         goldColor = findViewById(R.id.goldColor);
         silverColor = findViewById(R.id.silverColor);
         checkGold = findViewById(R.id.checkGold);
@@ -68,6 +65,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         soldText = findViewById(R.id.soldText);
         ratingText = findViewById(R.id.ratingText);
         productDetailsContent = findViewById(R.id.productDetailsContent);
+        imgProductDetailImage = findViewById(R.id.imgProductdetailImage);
 
         // Thiết lập text từ Java
         productTitle.setText("Tote Earrings");
@@ -77,6 +75,8 @@ public class ProductDetailActivity extends AppCompatActivity {
                 + "Skillfully crafted in recycled sterling silver\n"
                 + "Soft geometry trapeze shape with flat sides\n"
                 + "BLACK is engraved on one side only");
+        imgProductDetailImage.setImageResource(R.mipmap.ic_earring_silver);
+        imgProductDetailImage.setImageResource(R.mipmap.ic_earring_gold);
 
         btnDecrease.setOnClickListener(new View.OnClickListener() {
             @Override
