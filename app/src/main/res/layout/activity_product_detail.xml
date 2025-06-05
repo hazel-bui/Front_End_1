@@ -17,12 +17,13 @@
 
         <!-- Back Button -->
         <ImageView
-            android:id="@+id/backButton"
+            android:id="@+id/imgProductdetailBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
             android:layout_marginTop="5dp"
             android:src="@mipmap/ic_back_arrow"
+            android:tint="#E0E0E0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,28 +36,46 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/backButton" />
+            app:layout_constraintTop_toBottomOf="@id/imgProductdetailBack" />
 
-        <!-- Product Title -->
-        <TextView
-            android:id="@+id/productTitle"
+        <!-- Product Title and Heart -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutProductdetailHeader"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/montserrat_bold"
-            android:text=""
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgProductdetailImage"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgProductdetailImage" />
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/txtProductdetailProductTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:id="@+id/imgProductdetailHearticon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:src="@mipmap/ic_heart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/txtProductdetailProductTitle"
+                app:layout_constraintTop_toTopOf="@id/txtProductdetailProductTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!-- Rating Layout -->
         <LinearLayout
-            android:id="@+id/ratingLayout"
+            android:id="@+id/layoutProductdetailRating"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -66,10 +85,10 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/productTitle">
+            app:layout_constraintTop_toBottomOf="@id/layoutProductdetailHeader">
 
             <TextView
-                android:id="@+id/soldText"
+                android:id="@+id/drawableProductImageSold"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:background="@mipmap/ic_color_circle_silver_selected"
@@ -83,15 +102,15 @@
                 android:textSize="12sp" />
 
             <ImageView
-                android:id="@+id/starIcon"
+                android:id="@+id/imgProductdetailStaricon"
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:layout_marginStart="8dp"
-                android:src="@mipmap/ic_star"
-                android:contentDescription="Rating star" />
+                android:contentDescription="Rating star"
+                android:src="@mipmap/ic_star" />
 
             <TextView
-                android:id="@+id/ratingText"
+                android:id="@+id/txtProductdetailRatingText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -109,13 +128,13 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@id/ratingLayout"
+            app:layout_constraintTop_toBottomOf="@id/layoutProductdetailRating"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Product Details Label -->
+        <!-- Product Details -->
         <TextView
-            android:id="@+id/productDetailsLabel"
+            android:id="@+id/txtProductdetailText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -127,11 +146,10 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ratingLayout" />
+            app:layout_constraintTop_toBottomOf="@id/layoutProductdetailRating" />
 
-        <!-- Product Details Content -->
         <TextView
-            android:id="@+id/productDetailsContent"
+            android:id="@+id/txtProductDetailContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -143,10 +161,11 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/productDetailsLabel" />
+            app:layout_constraintTop_toBottomOf="@id/txtProductdetailText" />
 
+        <!-- Color Option Title -->
         <TextView
-            android:id="@+id/colorLabel"
+            android:id="@+id/txtProductdetailColorText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -158,77 +177,77 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/productDetailsContent" />
+            app:layout_constraintTop_toBottomOf="@id/txtProductDetailContent" />
 
-    <LinearLayout
-        android:id="@+id/colorOptionsLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/colorLabel">
+        <!-- Color Option -->
+        <LinearLayout
+            android:id="@+id/layoutProductdetailColorOption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtProductdetailColorText">
 
-        <FrameLayout
-            android:id="@+id/goldColor"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginEnd="12dp">
+            <FrameLayout
+                android:id="@+id/drawableProductdetailColorGold"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="12dp">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/circle_color_gold" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_color_gold" />
 
-            <!-- Nếu muốn hiển thị check khi chọn, bạn có thể thêm ImageView check ẩn mặc định -->
-            <ImageView
-                android:id="@+id/checkGold"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_gravity="center"
-                android:src="@mipmap/ic_check"
-                android:visibility="gone" />
-        </FrameLayout>
+                <ImageView
+                    android:id="@+id/drawableProductdetailcolorGold"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_check"
+                    android:visibility="gone" />
+            </FrameLayout>
 
-        <FrameLayout
-            android:id="@+id/silverColor"
-            android:layout_width="32dp"
-            android:layout_height="32dp">
+            <FrameLayout
+                android:id="@+id/drawableProductdetailColorSilver"
+                android:layout_width="32dp"
+                android:layout_height="32dp">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/circle_color_silver" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circle_color_silver" />
 
-            <ImageView
-                android:id="@+id/checkSilver"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:layout_gravity="center"
-                android:src="@mipmap/ic_check"
-                android:visibility="visible" /> <!-- mặc định chọn silver -->
+                <ImageView
+                    android:id="@+id/drawableProductdetailCheckSilver"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_check"
+                    android:visibility="visible" />
+            </FrameLayout>
+        </LinearLayout>
 
-        </FrameLayout>
-
-    </LinearLayout>
-
+        <!-- Quantity Section -->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/quantitySection"
-            android:layout_width="match_parent"
+            android:id="@+id/layoutProductdetailQuantitysection"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:paddingTop="4dp"
             android:paddingBottom="4dp"
-            app:layout_constraintTop_toBottomOf="@id/colorOptionsLayout">
+            app:layout_constraintTop_toBottomOf="@id/layoutProductdetailColorOption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <!-- Label Quantity sát lề trái -->
             <TextView
-                android:id="@+id/quantityLabel"
+                android:id="@+id/txtProductdetailQuantityText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/title_product_quantity"
@@ -239,9 +258,10 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
+            <!-- Add quantity selector here -->
             <!-- Khung điều chỉnh số lượng sát lề phải -->
             <LinearLayout
-                android:id="@+id/quantityControlLayout"
+                android:id="@+id/layoutProductdetailQuantityControl"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:background="@drawable/bg_product_sold"
@@ -254,7 +274,7 @@
                 app:layout_constraintBottom_toBottomOf="parent">
 
                 <ImageButton
-                    android:id="@+id/btnDecrease"
+                    android:id="@+id/btnProductdetailDecrease"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -265,7 +285,7 @@
                     android:backgroundTint="#847c4a" />
 
                 <TextView
-                    android:id="@+id/quantityValue"
+                    android:id="@+id/txtProductDetailQuantityValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -276,7 +296,7 @@
                     android:textStyle="bold" />
 
                 <ImageButton
-                    android:id="@+id/btnPlus"
+                    android:id="@+id/btnProductdetailPlus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -289,7 +309,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
-            android:id="@+id/priceAndButtonLayout"
+            android:id="@+id/layoutProductdetailPriceandbutton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -297,13 +317,13 @@
             android:layout_marginEnd="16dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            app:layout_constraintTop_toBottomOf="@id/quantitySection"
+            app:layout_constraintTop_toBottomOf="@id/layoutProductdetailQuantitysection"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             >
 
             <LinearLayout
-                android:id="@+id/totalPriceSection"
+                android:id="@+id/layoutProductdetailTotalPriceSection"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -311,7 +331,7 @@
 
 
                 <TextView
-                    android:id="@+id/totalPriceLabel"
+                    android:id="@+id/txtProductdetailTotalpriceText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_regular"
@@ -320,7 +340,7 @@
                     android:textSize="12sp" />
 
                 <TextView
-                    android:id="@+id/totalPriceValue"
+                    android:id="@+id/txtProductdetailTotalpriceValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="150.000vnd"
@@ -345,6 +365,5 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

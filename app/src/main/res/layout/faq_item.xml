@@ -11,24 +11,23 @@
     android:background="@android:color/white">
 
     <LinearLayout
-        android:id="@+id/faq_question_layout"
+        android:id="@+id/layoutFaqsQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
         <TextView
-            android:id="@+id/txtFaqQuestion"
+            android:id="@+id/txtFaqsQuestion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Sample question?"
             android:fontFamily="@font/montserrat_bold"
             android:textColor="#847c4a"
             android:textSize="16sp"/>
 
         <ImageView
-            android:id="@+id/btnFaqAdd"
+            android:id="@+id/btnFaqsAdd"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:tint="#847c4a"
@@ -36,10 +35,9 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/faq_answer"
+        android:id="@+id/txtFaqsAnswer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sample answer goes here."
         android:fontFamily="@font/montserrat_italic"
         android:textColor="#847c4a"
         android:layout_marginTop="10dp"

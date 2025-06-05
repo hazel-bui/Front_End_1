@@ -55,7 +55,7 @@ public class HelpCenterActivity extends AppCompatActivity {
         // ✅ Khởi tạo biến và layout sau khi setContentView
         TextView tabFaqs = findViewById(R.id.tabHelpcenterFaqs);
         TextView tabContact = findViewById(R.id.tabHelpcenterContactUs);
-        FrameLayout tabContent = findViewById(R.id.layoutHelpcenter);
+        FrameLayout tabContent = findViewById(R.id.layoutHelpcenterInfo);
         LayoutInflater inflater = LayoutInflater.from(this);
 
         ScrollView contactUsView = new ScrollView(this);
@@ -92,7 +92,7 @@ public class HelpCenterActivity extends AppCompatActivity {
         });
 
         // Tiếp tục xử lý FAQs
-        faqContainer = faqsView.findViewById(R.id.faq_container); // từ layout_faqs.xml
+        faqContainer = faqsView.findViewById(R.id.layoutFaqsContainer); // từ layout_faqs.xml
         montserratRegular = ResourcesCompat.getFont(this, R.font.montserrat_regular);
         montserratBold = ResourcesCompat.getFont(this, R.font.montserrat_bold);
         montserratItalic  = ResourcesCompat.getFont(this, R.font.montserrat_italic);
@@ -151,16 +151,16 @@ public class HelpCenterActivity extends AppCompatActivity {
 
             for (FAQItem item : entry.getValue()) {
                 View faqItemView = inflater.inflate(R.layout.faq_item, faqContainer, false);
-                TextView question = faqItemView.findViewById(R.id.txtFaqQuestion);
-                TextView answer = faqItemView.findViewById(R.id.faq_answer);
-                ImageView toggleIcon = faqItemView.findViewById(R.id.btnFaqAdd);
+                TextView question = faqItemView.findViewById(R.id.txtFaqsQuestion);
+                TextView answer = faqItemView.findViewById(R.id.txtFaqsAnswer);
+                ImageView toggleIcon = faqItemView.findViewById(R.id.btnFaqsAdd);
 
                 question.setText(item.question);
                 question.setTypeface(montserratRegular);
                 answer.setText(item.answer);
                 answer.setTypeface(montserratItalic);
 
-                faqItemView.findViewById(R.id.faq_question_layout).setOnClickListener(v -> {
+                faqItemView.findViewById(R.id.layoutFaqsQuestion).setOnClickListener(v -> {
                     if (answer.getVisibility() == View.GONE) {
                         answer.setVisibility(View.VISIBLE);
                         toggleIcon.setImageResource(R.mipmap.ic_minus);
@@ -206,7 +206,7 @@ public class HelpCenterActivity extends AppCompatActivity {
 
         for (ContactItem item : contacts) {
             View view = inflater.inflate(R.layout.contact_item, container, false);
-            ImageView icon = view.findViewById(R.id.contact_icon);
+            ImageView icon = view.findViewById(R.id.imgContactIcon);
             TextView title = view.findViewById(R.id.txtContactusContactname);
             TextView detail = view.findViewById(R.id.contact_detail);
             ImageView toggleIcon = view.findViewById(R.id.btnContactusAdd);

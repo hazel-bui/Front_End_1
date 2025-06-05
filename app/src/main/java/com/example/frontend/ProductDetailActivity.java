@@ -17,6 +17,8 @@ public class ProductDetailActivity extends AppCompatActivity {
 
     private TextView productTitle, soldText, ratingText, productDetailsContent;
     private ImageView imgProductDetailImage;
+    private ImageView heartIcon;
+    private boolean isHearted = false;
 
     private TextView quantityValue, totalPriceValue;
     private ImageView btnDecrease, btnPlus; // bạn dùng ImageView hay Button thì khai báo tương ứng
@@ -28,15 +30,15 @@ public class ProductDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product_detail);
 
         productImage = findViewById(R.id.imgProductdetailImage);
-        goldColor = findViewById(R.id.goldColor);
-        silverColor = findViewById(R.id.silverColor);
-        checkGold = findViewById(R.id.checkGold);
-        checkSilver = findViewById(R.id.checkSilver);
+        goldColor = findViewById(R.id.drawableProductdetailColorGold);
+        silverColor = findViewById(R.id.drawableProductdetailColorSilver);
+        checkGold = findViewById(R.id.drawableProductdetailcolorGold);
+        checkSilver = findViewById(R.id.drawableProductdetailCheckSilver);
 
-        quantityValue = findViewById(R.id.quantityValue);
-        totalPriceValue = findViewById(R.id.totalPriceValue);
-        btnDecrease = findViewById(R.id.btnDecrease);
-        btnPlus = findViewById(R.id.btnPlus);
+        quantityValue = findViewById(R.id.txtProductDetailQuantityValue);
+        totalPriceValue = findViewById(R.id.txtProductdetailTotalpriceValue);
+        btnDecrease = findViewById(R.id.btnProductdetailDecrease);
+        btnPlus = findViewById(R.id.btnProductdetailPlus);
 
         // Khởi tạo số lượng và giá hiển thị lần đầu
         quantityValue.setText(String.valueOf(quantity));
@@ -60,11 +62,25 @@ public class ProductDetailActivity extends AppCompatActivity {
             }
         });
 
+        heartIcon = findViewById(R.id.imgProductdetailHearticon);
+
+        heartIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isHearted = !isHearted; // Đảo trạng thái
+                if (isHearted) {
+                    heartIcon.setImageResource(R.mipmap.ic_heart_black); // đổi icon sang đen
+                } else {
+                    heartIcon.setImageResource(R.mipmap.ic_heart); // trở lại icon ban đầu
+                }
+            }
+        });
+
         // Ánh xạ view
-        productTitle = findViewById(R.id.productTitle);
-        soldText = findViewById(R.id.soldText);
-        ratingText = findViewById(R.id.ratingText);
-        productDetailsContent = findViewById(R.id.productDetailsContent);
+        productTitle = findViewById(R.id.txtProductdetailProductTitle);
+        soldText = findViewById(R.id.drawableProductImageSold);
+        ratingText = findViewById(R.id.txtProductdetailRatingText);
+        productDetailsContent = findViewById(R.id.txtProductDetailContent);
         imgProductDetailImage = findViewById(R.id.imgProductdetailImage);
 
         // Thiết lập text từ Java

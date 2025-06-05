@@ -73,7 +73,7 @@
 
     <!-- Tabs -->
     <LinearLayout
-        android:id="@+id/tab_layout"
+        android:id="@+id/layoutHelpcenterFaqsandcontactus"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
@@ -111,7 +111,7 @@
 
     <!-- Content Area -->
     <FrameLayout
-        android:id="@+id/layoutHelpcenter"
+        android:id="@+id/layoutHelpcenterInfo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
