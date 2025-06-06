@@ -37,8 +37,8 @@ public class ProductDetailActivity extends AppCompatActivity {
 
         quantityValue = findViewById(R.id.txtProductDetailQuantityValue);
         totalPriceValue = findViewById(R.id.txtProductdetailTotalpriceValue);
-        btnDecrease = findViewById(R.id.btnProductdetailDecrease);
-        btnPlus = findViewById(R.id.btnProductdetailPlus);
+        btnDecrease = findViewById(R.id.imgProductdetailButtonDecrease);
+        btnPlus = findViewById(R.id.imgProductdetailButtonPlus);
 
         // Khởi tạo số lượng và giá hiển thị lần đầu
         quantityValue.setText(String.valueOf(quantity));
@@ -62,7 +62,7 @@ public class ProductDetailActivity extends AppCompatActivity {
             }
         });
 
-        heartIcon = findViewById(R.id.imgProductdetailHearticon);
+        heartIcon = findViewById(R.id.imgProductdetailButtonHeart);
 
         heartIcon.setOnClickListener(new View.OnClickListener() {
             @Override

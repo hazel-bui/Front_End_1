@@ -17,7 +17,7 @@
         android:paddingEnd="12dp">
 
         <ImageView
-            android:id="@+id/btnHelpcenterBack"
+            android:id="@+id/imgHelpcenterButtonBack"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@mipmap/ic_back_arrow"
@@ -54,14 +54,14 @@
         android:focusable="true">
 
         <ImageView
-            android:id="@+id/btnHelpcenterSearch"
+            android:id="@+id/imgHelpcenterButtonSearch"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@mipmap/ic_search"
             android:tint="#847c4a" />
 
         <TextView
-            android:id="@+id/search_placeholder"
+            android:id="@+id/txtHelpcenterSearchText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_italic"
@@ -84,7 +84,7 @@
         android:padding="2dp">
 
         <TextView
-            android:id="@+id/tabHelpcenterFaqs"
+            android:id="@+id/txtHelpcenterFaqsText"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -97,7 +97,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tabHelpcenterContactUs"
+            android:id="@+id/txtHelpcenterContactUs"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

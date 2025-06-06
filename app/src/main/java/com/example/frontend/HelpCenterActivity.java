@@ -53,8 +53,8 @@ public class HelpCenterActivity extends AppCompatActivity {
         });
 
         // ✅ Khởi tạo biến và layout sau khi setContentView
-        TextView tabFaqs = findViewById(R.id.tabHelpcenterFaqs);
-        TextView tabContact = findViewById(R.id.tabHelpcenterContactUs);
+        TextView tabFaqs = findViewById(R.id.txtHelpcenterFaqsText);
+        TextView tabContact = findViewById(R.id.txtHelpcenterContactUs);
         FrameLayout tabContent = findViewById(R.id.layoutHelpcenterInfo);
         LayoutInflater inflater = LayoutInflater.from(this);
 
@@ -153,7 +153,7 @@ public class HelpCenterActivity extends AppCompatActivity {
                 View faqItemView = inflater.inflate(R.layout.faq_item, faqContainer, false);
                 TextView question = faqItemView.findViewById(R.id.txtFaqsQuestion);
                 TextView answer = faqItemView.findViewById(R.id.txtFaqsAnswer);
-                ImageView toggleIcon = faqItemView.findViewById(R.id.btnFaqsAdd);
+                ImageView toggleIcon = faqItemView.findViewById(R.id.imgFaqsButtonAdd);
 
                 question.setText(item.question);
                 question.setTypeface(montserratRegular);
@@ -208,8 +208,8 @@ public class HelpCenterActivity extends AppCompatActivity {
             View view = inflater.inflate(R.layout.contact_item, container, false);
             ImageView icon = view.findViewById(R.id.imgContactIcon);
             TextView title = view.findViewById(R.id.txtContactusContactname);
-            TextView detail = view.findViewById(R.id.contact_detail);
-            ImageView toggleIcon = view.findViewById(R.id.btnContactusAdd);
+            TextView detail = view.findViewById(R.id.txtContactusContactDetail);
+            ImageView toggleIcon = view.findViewById(R.id.imgContactusButtonMore);
 
             icon.setImageResource(item.iconResId);
             title.setText(item.title);

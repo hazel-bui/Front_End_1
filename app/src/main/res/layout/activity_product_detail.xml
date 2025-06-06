@@ -17,7 +17,7 @@
 
         <!-- Back Button -->
         <ImageView
-            android:id="@+id/imgProductdetailBack"
+            android:id="@+id/imgProductdetailButtonBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
@@ -36,7 +36,7 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgProductdetailBack" />
+            app:layout_constraintTop_toBottomOf="@id/imgProductdetailButtonBack" />
 
         <!-- Product Title and Heart -->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,7 +63,7 @@
                 app:layout_constraintBottom_toBottomOf="parent" />
 
             <ImageView
-                android:id="@+id/imgProductdetailHearticon"
+                android:id="@+id/imgProductdetailButtonHeart"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_marginStart="8dp"
@@ -274,7 +274,7 @@
                 app:layout_constraintBottom_toBottomOf="parent">
 
                 <ImageButton
-                    android:id="@+id/btnProductdetailDecrease"
+                    android:id="@+id/imgProductdetailButtonDecrease"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -296,7 +296,7 @@
                     android:textStyle="bold" />
 
                 <ImageButton
-                    android:id="@+id/btnProductdetailPlus"
+                    android:id="@+id/imgProductdetailButtonPlus"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

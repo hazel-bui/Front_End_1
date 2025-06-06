@@ -10,7 +10,7 @@
 
     <!-- Skip Button -->
     <TextView
-        android:id="@+id/btnOnBoardingSkip"
+        android:id="@+id/txtOnBoardingButtonSkip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -25,7 +25,7 @@
         android:id="@+id/imgOnboardingImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/btnOnBoardingSkip"
+        app:layout_constraintTop_toBottomOf="@id/txtOnBoardingButtonSkip"
         app:layout_constraintBottom_toTopOf="@+id/layoutOnboradingBottom"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

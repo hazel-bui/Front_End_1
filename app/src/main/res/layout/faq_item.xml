@@ -27,7 +27,7 @@
             android:textSize="16sp"/>
 
         <ImageView
-            android:id="@+id/btnFaqsAdd"
+            android:id="@+id/imgFaqsButtonAdd"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:tint="#847c4a"

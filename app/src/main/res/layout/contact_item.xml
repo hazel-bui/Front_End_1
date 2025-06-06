@@ -37,7 +37,7 @@
             android:fontFamily="@font/montserrat_bold" />
 
         <ImageView
-            android:id="@+id/btnContactusAdd"
+            android:id="@+id/imgContactusButtonMore"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@mipmap/ic_plus"
@@ -46,7 +46,7 @@
 
     <!-- Nội dung mở rộng -->
     <TextView
-        android:id="@+id/contact_detail"
+        android:id="@+id/txtContactusContactDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
